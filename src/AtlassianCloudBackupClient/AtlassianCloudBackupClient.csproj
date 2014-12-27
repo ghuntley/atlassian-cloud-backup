@@ -37,9 +37,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Polly">
-      <HintPath>..\packages\Polly.2.1.0\lib\net45\Polly.dll</HintPath>
-    </Reference>
     <Reference Include="Serilog">
       <HintPath>..\packages\Serilog.1.4.102\lib\net45\Serilog.dll</HintPath>
     </Reference>

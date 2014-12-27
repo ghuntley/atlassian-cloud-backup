@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  For more info on this file format visit http://docs.nuget.org/docs/reference/nuspec-reference.
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AtlassianCloudBackupClient</id>
+    <version>$version$</version>
+    <owners>ghuntley</owners>
+    <authors>Geoffrey Huntley</authors>
+    <title>AtlassianCloudBackupClient</title>
+    <description>Export your data from the Atlassian Cloud.</description>
+    <language>en-US</language>
+    <iconUrl>https://c2.staticflickr.com/4/3002/2742515529_c7f04dca4e.jpg</iconUrl>
+    <projectUrl>https://github.com/ghuntley/atlassian-cloud-backup</projectUrl>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>Atlassian Cloud Backup</tags>
+	<dependencies>
+		<dependency id="Microsoft.Net.Http" version="2.0.0" />
+		<dependency id="Conditons" version="2.0.0" />
+		<dependency id="Serilog" version="1.4.0" />
+		<dependency id="Serilog.Extras.Timing" version="1.4.0" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\AtlassianCloudBackupClient\bin\Release\AtlassianCloudBackupClient.dll" target="lib\net35" />
+    <file src="..\src\AtlassianCloudBackupClient\*.cs" target="src" />
+  </files>
+</package>

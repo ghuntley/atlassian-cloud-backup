@@ -20,7 +20,7 @@ namespace AtlassianCloudBackup
 
         [Option('s', "sleep", Required = true,
             HelpText =
-                "Amount of time in seconds to sleep after reqeusting a backup before download is started. Increase if your instance is large."
+                "Amount of time in seconds to sleep after requesting a backup before the download is started. Use larger amounts of time if your instance is large."
             )]
         public int Sleep { get; set; }
 

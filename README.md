@@ -12,7 +12,7 @@ Download the [latest release](https://github.com/ghuntley/atlassian-cloud-backup
 	Usage: AtlassianCloudBackup --destination C:\backups\ --sleep 600 --instance https://yourinstance.atlassian.net --username admin --password password
 	
 	  -d, --destination    Required. Destination directory where backups will be written to.
-	  -s, --sleep          Required. Amount of time in seconds to sleep after reqeusting a backup before download is started. Increase if your instance is large.
+	  -s, --sleep          Required. Amount of time in seconds to sleep after requesting a backup before the download is started. Use larger amounts of time if your instance is large.
 	  -i, --instance       Required. Atlassian Cloud instance url.
 	  -u, --username       Required. Atlassian Cloud username with administrative privledges.
 	  -p, --password       Required. Password for administrative account.

@@ -69,7 +69,7 @@ namespace AtlassianCloudBackup
                     await backupClient.RequestJiraBackupAsync();
                     await backupClient.RequestConfluenceBackupAsync();
 
-                    logger.Information("Sleeping for {seconds} seconds before starting download.", options.Sleep);
+                    logger.Information("Sleeping for {seconds} seconds before starting download(s).", options.Sleep);
                     Thread.Sleep(options.Sleep*1000);
                     await backupClient.DownloadJiraBackupAsync(new Uri(options.DestinationPath), DateTime.Now);
                     await backupClient.DownloadConfluenceBackupAsync(new Uri(options.DestinationPath), DateTime.Now);

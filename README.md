@@ -1,6 +1,6 @@
 # Atlassian Cloud Backup
 
-Atlassian take point in time backups every 24 hours of your data for the purposes of recovery in case of application failure. Atlassian claim that these backups are kept seperate from the data centre in which the instance runs and that using these snapshots cannot be used to roll back changes to application data. Thus is tool is born, it integrates in with the Atlassian Cloud and will export your data from their cloud onto your local computer.
+Atlassian take point in time backups every 24 hours of your data for the purposes of recovery in case of application failure. Atlassian claim that these backups are kept seperate from the data centre in which the instance runs and that using these snapshots cannot be used to roll back changes to application data. Thus this tool is born, it integrates in with the Atlassian Cloud and will export your data from their cloud onto your local computer.
 
 # Getting Started
 

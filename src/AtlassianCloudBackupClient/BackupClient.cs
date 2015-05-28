@@ -120,6 +120,7 @@ namespace AtlassianCloudBackupClient
 
             var requestContent = JsonConvert.SerializeObject(new
             {
+                cbAttachments = "true"
             });
 
             logger.Information("Requesting backup of JIRA.");

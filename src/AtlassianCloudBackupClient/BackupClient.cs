@@ -152,17 +152,11 @@ namespace AtlassianCloudBackupClient
                 {
                     using (var client = BuildHttpClient())
                     {
-                        var response = await client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
-
-                        response.EnsureSuccessStatusCode();
-
-                        using (var fileStream = File.Create(destinationFilepath.LocalPath))
+                        using (var response = await client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead))
+                        using (var streamToReadFrom = await response.Content.ReadAsStreamAsync())
+                        using (var streamToWriteTo = File.Open(destinationFilepath.LocalPath, FileMode.Create))
                         {
-                            using (var httpStream = await response.Content.ReadAsStreamAsync())
-                            {
-                                httpStream.CopyTo(fileStream);
-                                fileStream.Flush();
-                            }
+                            await streamToReadFrom.CopyToAsync(streamToWriteTo);
                         }
                     }
                 }

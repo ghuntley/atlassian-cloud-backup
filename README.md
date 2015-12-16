@@ -16,6 +16,7 @@ Download the [latest release](https://github.com/ghuntley/atlassian-cloud-backup
 	  -i, --instance       Required. Atlassian Cloud instance url.
 	  -u, --username       Required. Atlassian Cloud username with administrative privledges.
 	  -p, --password       Required. Password for administrative account.
+	  -a, --application    Applications to backup j for Jira, c for Confluence, jc for both.
 	  --help               Display this help screen.
 
 # Usage

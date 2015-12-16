@@ -33,10 +33,15 @@ namespace AtlassianCloudBackup
         ]
         public string Username { get; set; }
 
-
+        
         [Option('p', "password", Required = true, HelpText = "Password for administrative account.")]
         public string Password { get; set; }
 
+        
+        [Option('a', "application", Required = false, DefaultValue="jc", HelpText = "Applications to backup j for Jira, c for Confluence, jc for both.")]
+        public string Applications { get; set; }
+
+        
 
         [HelpOption]
         public string GetUsage()

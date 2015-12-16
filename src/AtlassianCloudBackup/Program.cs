@@ -66,13 +66,13 @@ namespace AtlassianCloudBackup
 
                     await backupClient.AuthenticateAsync();
 
-                    await backupClient.RequestJiraBackupAsync();
-                    await backupClient.RequestConfluenceBackupAsync();
+                    if(options.Applications.Contains("j")) await backupClient.RequestJiraBackupAsync();
+                    if(options.Applications.Contains("c")) await backupClient.RequestConfluenceBackupAsync();
 
                     logger.Information("Sleeping for {seconds} seconds before starting download(s).", options.Sleep);
                     Thread.Sleep(options.Sleep*1000);
-                    await backupClient.DownloadJiraBackupAsync(new Uri(options.DestinationPath), DateTime.Now);
-                    await backupClient.DownloadConfluenceBackupAsync(new Uri(options.DestinationPath), DateTime.Now);
+                    if(options.Applications.Contains("j"))  await backupClient.DownloadJiraBackupAsync(new Uri(options.DestinationPath), DateTime.Now);
+                    if(options.Applications.Contains("c")) await backupClient.DownloadConfluenceBackupAsync(new Uri(options.DestinationPath), DateTime.Now);
 
                     logger.Information("Finished backup.");
                     Environment.Exit((int) ExitCode.Success);

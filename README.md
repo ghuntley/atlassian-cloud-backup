@@ -4,7 +4,7 @@ Atlassian take point in time backups every 24 hours of your data for the purpose
 
 # Getting Started
 
-Download the [latest release](https://github.com/ghuntley/atlassian-cloud-backup/releases/download/v1.1.0/AtlassianCloudBackup-1.1.0.zip), extract it and then run:
+Download the [latest release](https://github.com/ghuntley/atlassian-cloud-backup/releases/), extract it and then run:
 
 	> AtlassianCloudBackup.exe -h
 	Copyright (C) 2015 Geoffrey Huntley <ghuntley@ghuntley.com>
